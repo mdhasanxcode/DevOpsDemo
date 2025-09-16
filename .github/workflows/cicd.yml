@@ -1,0 +1,13 @@
+name: DevOpsDemo - Git Action Demo
+on:
+    push:
+        branches:
+            - main
+jobs:
+    read_hello_file:
+        runs-on: ubuntu-latest
+        steps:
+            - name: git checkout
+              uses: actions/checkout@v4
+            - name: read text file
+              run: cat hello.txt
